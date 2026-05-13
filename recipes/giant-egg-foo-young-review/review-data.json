@@ -1,0 +1,244 @@
+{
+  "plated_items": [
+    {
+      "name": "Frozen cauliflower, 3 x 12 oz bags",
+      "amount": "36 oz",
+      "weight_g": 729.0,
+      "cal": 182.14285714285714,
+      "protein": 13.857142857142856,
+      "carbs": 36.42857142857143,
+      "fat": 2.2142857142857144,
+      "cost": 4.285714285714286,
+      "note": "Full batch purchased/cooked; only part is plated. Prorated at 71.4% because the plated skillet uses 1000g of an assumed 1400g cooked/drained vegetable batch."
+    },
+    {
+      "name": "Mushrooms, 8 oz",
+      "amount": "8 oz",
+      "weight_g": 162.0,
+      "cal": 35.714285714285715,
+      "protein": 5.0,
+      "carbs": 5.357142857142858,
+      "fat": 0.5,
+      "cost": 1.7857142857142858,
+      "note": "Full package cooked. Prorated at 71.4% because the plated skillet uses 1000g of an assumed 1400g cooked/drained vegetable batch."
+    },
+    {
+      "name": "Zucchini",
+      "amount": "1000g",
+      "weight_g": 714.2857142857143,
+      "cal": 121.42857142857143,
+      "protein": 8.571428571428571,
+      "carbs": 22.142857142857142,
+      "fat": 2.142857142857143,
+      "cost": 2.142857142857143,
+      "note": "Full amount cooked. Prorated at 71.4% because the plated skillet uses 1000g of an assumed 1400g cooked/drained vegetable batch."
+    },
+    {
+      "name": "Avocado oil spray + dry seasonings",
+      "amount": "to taste",
+      "weight_g": 0.0,
+      "cal": 7.142857142857143,
+      "protein": 0.0,
+      "carbs": 1.4285714285714286,
+      "fat": 0.0,
+      "cost": 0.28571428571428575,
+      "note": "Spray treated as near-zero; spices estimated. Prorated at 71.4% because the plated skillet uses 1000g of an assumed 1400g cooked/drained vegetable batch."
+    },
+    {
+      "name": "Green Giant vegetable + cheese packet",
+      "amount": "1 packet",
+      "weight_g": 170,
+      "cal": 110,
+      "protein": 4.0,
+      "carbs": 18.0,
+      "fat": 3.0,
+      "cost": 1.5,
+      "note": "Label calories known; macros estimated."
+    },
+    {
+      "name": "Sriracha",
+      "amount": "1 tbsp",
+      "weight_g": 15,
+      "cal": 15,
+      "protein": 0,
+      "carbs": 3.0,
+      "fat": 0,
+      "cost": 0.1,
+      "note": "Estimated."
+    },
+    {
+      "name": "Red miso",
+      "amount": "2 tsp",
+      "weight_g": 12,
+      "cal": 25,
+      "protein": 1.5,
+      "carbs": 3.0,
+      "fat": 0.8,
+      "cost": 0.25,
+      "note": "Estimated."
+    },
+    {
+      "name": "Garlic salt in sauce",
+      "amount": "1/2 tsp",
+      "weight_g": 0,
+      "cal": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "cost": 0.03,
+      "note": "Cost only."
+    },
+    {
+      "name": "Xanthan gum",
+      "amount": "1-2g",
+      "weight_g": 2,
+      "cal": 7,
+      "protein": 0,
+      "carbs": 1.7,
+      "fat": 0,
+      "cost": 0.1,
+      "note": "Estimated 2g."
+    },
+    {
+      "name": "Minced garlic",
+      "amount": "1-2 tsp",
+      "weight_g": 6,
+      "cal": 9,
+      "protein": 0.4,
+      "carbs": 2.0,
+      "fat": 0,
+      "cost": 0.06,
+      "note": "Estimated 2 tsp."
+    },
+    {
+      "name": "Cooked chicken breast",
+      "amount": "100g",
+      "weight_g": 100,
+      "cal": 165,
+      "protein": 31.0,
+      "carbs": 0,
+      "fat": 3.6,
+      "cost": 1.1,
+      "note": "Cooked weight."
+    },
+    {
+      "name": "Whole egg",
+      "amount": "1 large",
+      "weight_g": 50,
+      "cal": 72,
+      "protein": 6.3,
+      "carbs": 0.4,
+      "fat": 4.8,
+      "cost": 0.3,
+      "note": "Large egg."
+    },
+    {
+      "name": "Egg whites",
+      "amount": "275g",
+      "weight_g": 275,
+      "cal": 143,
+      "protein": 30.0,
+      "carbs": 2.0,
+      "fat": 0.5,
+      "cost": 1.5,
+      "note": "Carton egg whites."
+    },
+    {
+      "name": "Reduced-fat Velveeta",
+      "amount": "10g",
+      "weight_g": 10,
+      "cal": 24,
+      "protein": 2.0,
+      "carbs": 1.0,
+      "fat": 1.0,
+      "cost": 0.15,
+      "note": "Estimated from label-like values."
+    }
+  ],
+  "plated_totals": {
+    "weight_g": 2245.285714285714,
+    "cal": 916.4285714285714,
+    "protein": 102.62857142857142,
+    "carbs": 96.45714285714287,
+    "fat": 18.557142857142857,
+    "cost": 13.59
+  },
+  "batch_totals": {
+    "weight_g": 2887.4,
+    "cal": 1055,
+    "protein": 113.6,
+    "carbs": 122.60000000000001,
+    "fat": 20.5,
+    "cost": 16.99
+  },
+  "steps": [
+    {
+      "n": 1,
+      "name": "Air fry cauliflower and mushrooms",
+      "active": 5,
+      "elapsed": 20,
+      "note": "Load, spray, season; first leg cooks while zucchini is prepped."
+    },
+    {
+      "n": 2,
+      "name": "Chop and season zucchini",
+      "active": 8,
+      "elapsed": 8,
+      "note": "Active knife work while step 1 is underway."
+    },
+    {
+      "n": 3,
+      "name": "Add zucchini and finish vegetable batch",
+      "active": 3,
+      "elapsed": 20,
+      "note": "Add/toss zucchini; finish air frying and drive off moisture."
+    },
+    {
+      "n": 4,
+      "name": "Start sauce base",
+      "active": 2,
+      "elapsed": 6,
+      "note": "Microwave packet while vegetables finish."
+    },
+    {
+      "n": 5,
+      "name": "Drain vegetable liquid",
+      "active": 4,
+      "elapsed": 4,
+      "note": "Transfer cooked vegetables and drain liquid into blender."
+    },
+    {
+      "n": 6,
+      "name": "Weigh 1000g cooked vegetables",
+      "active": 3,
+      "elapsed": 3,
+      "note": "Weigh plated portion and save remaining vegetables."
+    },
+    {
+      "n": 7,
+      "name": "Blend the sauce",
+      "active": 5,
+      "elapsed": 5,
+      "note": "Add seasonings/xanthan and blend smooth."
+    },
+    {
+      "n": 8,
+      "name": "Build skillet and add eggs",
+      "active": 7,
+      "elapsed": 10,
+      "note": "Garlic, vegetables, chicken, eggs; cover to set."
+    },
+    {
+      "n": 9,
+      "name": "Flip, melt cheese, and plate",
+      "active": 6,
+      "elapsed": 8,
+      "note": "Flip sections, melt cheese, plate, and sauce."
+    }
+  ],
+  "active_total": 43,
+  "elapsed_range": [
+    55,
+    65
+  ]
+}
