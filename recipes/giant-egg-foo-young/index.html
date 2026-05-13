@@ -1,570 +1,102 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Giant Egg Foo Young | High Protein, High Volume</title>
-    <style>
-      :root {
-        --paper: #f7f4ed;
-        --ink: #211d18;
-        --muted: #6e655c;
-        --line: #ded5c8;
-        --cream: #fffdf8;
-        --chile: #b93f28;
-        --chile-dark: #812919;
-        --green: #4f6e4c;
-        --gold: #df9b45;
-        --charcoal: #191713;
-        --shadow: 0 22px 70px rgba(25, 23, 19, 0.12);
-        color-scheme: light;
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        background: var(--paper);
-      }
-
-      body {
-        margin: 0;
-        color: var(--ink);
-        background:
-          linear-gradient(135deg, rgba(185, 63, 40, 0.08), transparent 34%),
-          linear-gradient(315deg, rgba(79, 110, 76, 0.1), transparent 38%),
-          var(--paper);
-      }
-
-      img {
-        display: block;
-        max-width: 100%;
-      }
-
-      h1,
-      h2,
-      h3,
-      p {
-        margin-top: 0;
-      }
-
-      .page {
-        margin: 0 auto;
-        max-width: 1180px;
-        padding: clamp(20px, 4vw, 44px);
-      }
-
-      .hero {
-        display: grid;
-        gap: clamp(28px, 5vw, 56px);
-        grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.72fr);
-        min-height: 82vh;
-        padding: clamp(28px, 5vw, 64px) 0 28px;
-        align-items: center;
-      }
-
-      .eyebrow {
-        color: var(--chile-dark);
-        font-size: 0.78rem;
-        font-weight: 850;
-        letter-spacing: 0;
-        margin-bottom: 14px;
-        text-transform: uppercase;
-      }
-
-      h1 {
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(3.2rem, 8vw, 7.35rem);
-        font-weight: 500;
-        letter-spacing: 0;
-        line-height: 0.9;
-        margin-bottom: 22px;
-      }
-
-      .dek {
-        color: var(--muted);
-        font-size: clamp(1.08rem, 1.8vw, 1.34rem);
-        line-height: 1.55;
-        max-width: 680px;
-      }
-
-      .stats {
-        display: grid;
-        gap: 12px;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        margin: 32px 0 0;
-        padding: 0;
-      }
-
-      .stats div {
-        background: rgba(255, 253, 248, 0.78);
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        padding: 16px;
-      }
-
-      dt {
-        color: var(--muted);
-        font-size: 0.74rem;
-        font-weight: 850;
-        letter-spacing: 0;
-        text-transform: uppercase;
-      }
-
-      dd {
-        margin: 5px 0 0;
-      }
-
-      .stats dd {
-        color: var(--chile-dark);
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(1.15rem, 2vw, 1.45rem);
-      }
-
-      .hero-card {
-        background: var(--charcoal);
-        border-radius: 8px;
-        box-shadow: var(--shadow);
-        color: var(--cream);
-        overflow: hidden;
-      }
-
-      .hero-card img {
-        aspect-ratio: 4 / 5;
-        height: 100%;
-        object-fit: cover;
-        width: 100%;
-      }
-
-      .section {
-        margin: 40px 0;
-      }
-
-      .section-header {
-        align-items: end;
-        border-bottom: 1px solid var(--line);
-        display: flex;
-        gap: 18px;
-        justify-content: space-between;
-        margin-bottom: 22px;
-        padding-bottom: 18px;
-      }
-
-      h2 {
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(2.2rem, 5vw, 4rem);
-        font-weight: 500;
-        letter-spacing: 0;
-        line-height: 1;
-        margin-bottom: 0;
-      }
-
-      .note {
-        color: var(--muted);
-        line-height: 1.6;
-        margin-bottom: 0;
-        max-width: 520px;
-      }
-
-      .ingredient-grid {
-        display: grid;
-        gap: 18px;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .ingredient-card {
-        background: var(--cream);
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        box-shadow: 0 12px 36px rgba(25, 23, 19, 0.06);
-        padding: clamp(20px, 3vw, 30px);
-      }
-
-      h3 {
-        color: var(--green);
-        font-size: 0.84rem;
-        font-weight: 850;
-        letter-spacing: 0;
-        margin-bottom: 14px;
-        text-transform: uppercase;
-      }
-
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      li {
-        border-top: 1px solid rgba(222, 213, 200, 0.8);
-        color: var(--ink);
-        display: grid;
-        gap: 16px;
-        grid-template-columns: 128px 1fr;
-        line-height: 1.5;
-        padding: 12px 0;
-      }
-
-      li:first-child {
-        border-top: 0;
-        padding-top: 0;
-      }
-
-      li:last-child {
-        padding-bottom: 0;
-      }
-
-      li span {
-        color: var(--chile-dark);
-        font-weight: 800;
-      }
-
-      .steps {
-        display: grid;
-        gap: clamp(18px, 4vw, 42px);
-      }
-
-      .step {
-        background: var(--cream);
-        border-radius: 8px;
-        box-shadow: var(--shadow);
-        display: grid;
-        grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.62fr);
-        overflow: hidden;
-      }
-
-      .step:nth-child(even) {
-        grid-template-columns: minmax(280px, 0.62fr) minmax(0, 0.9fr);
-      }
-
-      .step:nth-child(even) figure {
-        grid-column: 2;
-      }
-
-      .step:nth-child(even) .step-copy {
-        grid-column: 1;
-        grid-row: 1;
-      }
-
-      figure {
-        margin: 0;
-        min-height: 380px;
-      }
-
-      figure img {
-        aspect-ratio: 4 / 5;
-        height: 100%;
-        object-fit: cover;
-        width: 100%;
-      }
-
-      .step-copy {
-        align-content: center;
-        display: grid;
-        min-height: 380px;
-        padding: clamp(24px, 4vw, 54px);
-      }
-
-      .step-number {
-        color: var(--chile);
-        font-size: 0.82rem;
-        font-weight: 900;
-        letter-spacing: 0;
-        margin-bottom: 14px;
-      }
-
-      .step h3 {
-        color: var(--ink);
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(1.95rem, 4.5vw, 3.85rem);
-        font-weight: 500;
-        letter-spacing: 0;
-        line-height: 1;
-        margin-bottom: 18px;
-        text-transform: none;
-      }
-
-      .step p:last-child {
-        color: var(--muted);
-        font-size: clamp(1rem, 1.5vw, 1.18rem);
-        line-height: 1.58;
-        margin-bottom: 0;
-      }
-
-      .final {
-        background: var(--charcoal);
-        border-radius: 8px;
-        color: var(--cream);
-        display: grid;
-        gap: 18px;
-        grid-template-columns: minmax(0, 1fr) auto;
-        margin: 44px 0 20px;
-        padding: clamp(24px, 4vw, 42px);
-      }
-
-      .final p {
-        color: rgba(255, 253, 248, 0.74);
-        line-height: 1.6;
-        margin-bottom: 0;
-        max-width: 720px;
-      }
-
-      .final strong {
-        color: var(--gold);
-      }
-
-      @media (max-width: 860px) {
-        .hero,
-        .ingredient-grid,
-        .step,
-        .step:nth-child(even),
-        .final {
-          grid-template-columns: 1fr;
-        }
-
-        .hero {
-          min-height: 0;
-        }
-
-        .stats {
-          grid-template-columns: 1fr;
-        }
-
-        .section-header {
-          align-items: start;
-          flex-direction: column;
-        }
-
-        .step:nth-child(even) figure,
-        .step:nth-child(even) .step-copy {
-          grid-column: auto;
-          grid-row: auto;
-        }
-
-        figure,
-        .step-copy {
-          min-height: 0;
-        }
-
-        li {
-          grid-template-columns: 1fr;
-          gap: 4px;
-        }
-      }
-
-      @media print {
-        body {
-          background: var(--cream);
-        }
-
-        .page {
-          max-width: none;
-          padding: 0;
-        }
-
-        .hero {
-          min-height: 0;
-        }
-
-        .step,
-        .ingredient-card,
-        .hero-card {
-          box-shadow: none;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <main class="page">
-      <header class="hero">
-        <div>
-          <p class="eyebrow">High Protein, High Volume</p>
-          <h1>Giant Egg Foo Young</h1>
-          <p class="dek">A five-pound-ish plate that eats like egg foo young crossed with a cheesy comfort food skillet. It is huge, salty, spicy, and actually filling.</p>
-
-          <dl class="stats" aria-label="Recipe facts">
-            <div>
-              <dt>Entire plate</dt>
-              <dd>~800 calories</dd>
-            </div>
-            <div>
-              <dt>Protein</dt>
-              <dd>~100g</dd>
-            </div>
-            <div>
-              <dt>Volume</dt>
-              <dd>Nearly 5 lb</dd>
-            </div>
-          </dl>
-        </div>
-
-        <figure class="hero-card">
-          <img src="assets/egg-foo-young/09-serve.png" alt="A huge plated serving of egg foo young with melted cheese and thick orange-red sauce poured over the top.">
-        </figure>
-      </header>
-
-      <section class="section" aria-labelledby="ingredients-title">
-        <div class="section-header">
-          <h2 id="ingredients-title">Ingredients</h2>
-          <p class="note">Cook all the vegetables first, then use 1000g total cooked vegetables in the skillet. Save the rest for later.</p>
-        </div>
-
-        <div class="ingredient-grid">
-          <section class="ingredient-card" aria-labelledby="vegetables-title">
-            <h3 id="vegetables-title">Vegetables</h3>
-            <ul>
-              <li><span>3 bags</span> frozen cauliflower</li>
-              <li><span>1 package</span> mushrooms</li>
-              <li><span>1000g</span> chopped zucchini</li>
-              <li><span>To taste</span> garlic salt, garlic powder, onion powder, smoked paprika</li>
-              <li><span>Light spray</span> calorie-free avocado oil spray</li>
-            </ul>
-          </section>
-
-          <section class="ingredient-card" aria-labelledby="protein-title">
-            <h3 id="protein-title">Protein</h3>
-            <ul>
-              <li><span>~300g total</span> lean protein</li>
-              <li><span>Choose one</span> chicken breast, sirloin steak, trout, ground turkey, or a mix</li>
-            </ul>
-          </section>
-
-          <section class="ingredient-card" aria-labelledby="eggs-cheese-title">
-            <h3 id="eggs-cheese-title">Eggs and Cheese</h3>
-            <ul>
-              <li><span>1</span> whole egg</li>
-              <li><span>275g</span> egg whites</li>
-              <li><span>To top</span> reduced-fat Velveeta shredded cheese</li>
-            </ul>
-          </section>
-
-          <section class="ingredient-card" aria-labelledby="sauce-title">
-            <h3 id="sauce-title">Sauce</h3>
-            <ul>
-              <li><span>1 packet</span> Green Giant broccoli and cheese or cauliflower/broccoli/carrot cheese packet, about 110 cal</li>
-              <li><span>Use liquid</span> drained vegetable liquid from cooked vegetables</li>
-              <li><span>To taste</span> sriracha</li>
-              <li><span>A little</span> red miso concentrate</li>
-              <li><span>To taste</span> garlic salt</li>
-              <li><span>1-2g</span> xanthan gum</li>
-            </ul>
-          </section>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="steps-title">
-        <div class="section-header">
-          <h2 id="steps-title">Step-by-Step</h2>
-          <p class="note">The move is simple: roast a ridiculous amount of vegetables, steal their liquid for sauce, then set the whole skillet with eggs.</p>
-        </div>
-
-        <div class="steps">
-          <article class="step">
-            <figure>
-              <img src="assets/egg-foo-young/01-air-fry-vegetables.png" alt="Cauliflower, mushrooms, and chopped zucchini being seasoned in an air fryer basket.">
-            </figure>
-            <div class="step-copy">
-              <p class="step-number">01</p>
-              <h3>Air Fry Vegetables</h3>
-              <p>Add cauliflower and mushrooms to the air fryer. Spray lightly and season with garlic salt and garlic powder. Chop zucchini, season it, then add it too. Cook 35-40 minutes, mixing several times, until soft and lightly charred.</p>
-            </div>
-          </article>
-
-          <article class="step">
-            <figure>
-              <img src="assets/egg-foo-young/02-sauce-base.png" alt="A microwave-steamed vegetable cheese packet being added to a blender jar.">
-            </figure>
-            <div class="step-copy">
-              <p class="step-number">02</p>
-              <h3>Start Sauce Base</h3>
-              <p>Microwave the vegetable cheese packet for about 6 minutes, then add it to a blender. This gives the sauce its cheesy base without blowing up the calories.</p>
-            </div>
-          </article>
-
-          <article class="step">
-            <figure>
-              <img src="assets/egg-foo-young/03-drain-liquid.png" alt="Cooked vegetables being tilted so their liquid pours into a blender jar for sauce.">
-            </figure>
-            <div class="step-copy">
-              <p class="step-number">03</p>
-              <h3>Drain Vegetable Liquid</h3>
-              <p>Transfer cooked vegetables to a large container. Tilt the container with the lid cracked and pour the excess liquid into the blender. That liquid becomes the sauce base instead of watery garbage at the bottom of the plate.</p>
-            </div>
-          </article>
-
-          <article class="step">
-            <figure>
-              <img src="assets/egg-foo-young/04-measure-vegetables.png" alt="A large bowl of cooked cauliflower, zucchini, and mushrooms sitting on a kitchen scale.">
-            </figure>
-            <div class="step-copy">
-              <p class="step-number">04</p>
-              <h3>Measure Vegetables</h3>
-              <p>Weigh out 1000g cooked vegetables for the recipe. Save the rest for another bowl, skillet, or whatever you are eating later.</p>
-            </div>
-          </article>
-
-          <article class="step">
-            <figure>
-              <img src="assets/egg-foo-young/05-finish-sauce.png" alt="Sriracha, miso, garlic salt, and xanthan gum being added to a blender with orange cheese sauce.">
-            </figure>
-            <div class="step-copy">
-              <p class="step-number">05</p>
-              <h3>Finish Sauce</h3>
-              <p>Add sriracha, a little miso, garlic salt, and 1-2g xanthan gum to the blender. Blend until smooth and thick. Xanthan gum is the thickener here, so go easy unless you want sauce paste.</p>
-            </div>
-          </article>
-
-          <article class="step">
-            <figure>
-              <img src="assets/egg-foo-young/06-build-skillet.png" alt="A large skillet filled with cooked vegetables, minced garlic, and lean protein.">
-            </figure>
-            <div class="step-copy">
-              <p class="step-number">06</p>
-              <h3>Build Skillet</h3>
-              <p>Heat a pan to medium-high, about 3/4 heat. Spray lightly, add minced garlic, then add the 1000g cooked vegetables and your lean protein. Mix it into one giant skillet.</p>
-            </div>
-          </article>
-
-          <article class="step">
-            <figure>
-              <img src="assets/egg-foo-young/07-add-eggs.png" alt="Beaten egg and egg whites being poured over the vegetable and protein skillet mixture.">
-            </figure>
-            <div class="step-copy">
-              <p class="step-number">07</p>
-              <h3>Add Eggs</h3>
-              <p>Mix 1 whole egg with 275g egg whites. Pour it over the pan, cover, and cook 1-2 minutes so the egg starts setting around the vegetables and protein.</p>
-            </div>
-          </article>
-
-          <article class="step">
-            <figure>
-              <img src="assets/egg-foo-young/08-flip-cheese.png" alt="Cut sections of egg foo young flipped in a skillet and topped with melting shredded cheese.">
-            </figure>
-            <div class="step-copy">
-              <p class="step-number">08</p>
-              <h3>Flip and Finish</h3>
-              <p>Cut the skillet into sections and flip them. Top with reduced-fat Velveeta shredded cheese. Cover, turn the heat off, and let the carryover heat finish cooking everything.</p>
-            </div>
-          </article>
-
-          <article class="step">
-            <figure>
-              <img src="assets/egg-foo-young/09-serve.png" alt="Finished giant egg foo young stacked on a plate and covered with thick cheesy orange sauce.">
-            </figure>
-            <div class="step-copy">
-              <p class="step-number">09</p>
-              <h3>Serve</h3>
-              <p>Stack the sections on a plate and pour the thick sauce over the top. Massive portion. High protein. Actually filling.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <footer class="final">
-        <p><strong>Want more high-volume recipes like this?</strong> Comment RECIPE.</p>
-      </footer>
-    </main>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giant Egg Foo Young</title>
+  <meta name="description" content="A massive high-volume egg foo young skillet with creamy vegetable sauce, about 850 calories and 98g protein.">
+  <style>
+    :root { --bg:#fffaf2; --ink:#241b14; --muted:#6f6257; --card:#ffffff; --line:#eadfce; --accent:#9a4d16; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    main { max-width: 860px; margin: 0 auto; padding: 28px 18px 64px; }
+    header { margin-bottom: 28px; }
+    .eyebrow { color:var(--accent); font-weight:800; letter-spacing:.12em; text-transform:uppercase; font-size:.78rem; }
+    h1 { font-size: clamp(2.1rem, 8vw, 4.8rem); line-height:.95; margin:.15em 0 .25em; }
+    .summary, .meta, .card { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:18px; box-shadow:0 12px 36px rgba(64,35,10,.06); }
+    .summary { font-size:1.08rem; color:var(--muted); }
+    .meta { display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap:12px; margin:18px 0; }
+    .meta div { min-width:0; }
+    .label { color:var(--muted); font-size:.78rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; }
+    h2 { margin-top:34px; font-size:1.65rem; }
+    ul, ol { padding-left:1.35rem; }
+    li { margin:.4rem 0; }
+    .step { margin:18px 0 26px; overflow:hidden; }
+    .step img { width:100%; height:auto; display:block; border-radius:16px; border:1px solid var(--line); margin-top:12px; }
+    .step h3 { margin:0 0 .35rem; font-size:1.22rem; }
+    .note { color:var(--muted); font-size:.95rem; }
+    footer { margin-top:42px; color:var(--muted); font-size:.9rem; }
+    @media (max-width: 560px) { main { padding:22px 14px 52px; } .summary,.meta,.card { border-radius:16px; padding:15px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">Jeff the Chef</div>
+      <h1>Giant Egg Foo Young</h1>
+      <p class="summary">A giant egg foo young / skillet quiche hybrid built for volume: vegetables, egg whites, 100g cooked chicken, a little Velveeta, and a creamy sauce made from vegetable liquid instead of cream, butter, or flour.</p>
+      <section class="meta" aria-label="Recipe overview"><div><div class="label">Calories</div><strong>about 850</strong></div><div><div class="label">Protein</div><strong>about 98g</strong></div><div><div class="label">Food weight</div><strong>about 4.6 lb</strong></div><div><div class="label">Time</div><strong>55–65 min</strong></div><div><div class="label">Cost</div><strong>about $14 plated</strong></div><div><div class="label">Yield</div><strong>1 massive serving</strong></div></section>
+    </header>
+    <section class="card" aria-labelledby="ingredients-heading">
+      <h2 id="ingredients-heading">Ingredients</h2>
+      
+<h3>Vegetable base</h3>
+<ul><li>3 bags frozen cauliflower, about 12 oz each</li><li>1 package mushrooms, about 8 oz, sliced or chopped</li><li>1000g zucchini, chopped</li><li>Calorie-free avocado oil spray</li><li>Garlic salt, garlic powder, onion powder, and smoked paprika</li></ul>
+<h3>Sauce</h3>
+<ul><li>1 Green Giant vegetable + cheese packet, 110 calories</li><li>Liquid drained from the cooked vegetables</li><li>1 tablespoon sriracha</li><li>2 teaspoons red miso</li><li>1/2 teaspoon garlic salt</li><li>1–2g xanthan gum</li></ul>
+<h3>Skillet</h3>
+<ul><li>1–2 teaspoons minced garlic</li><li>1000g cooked vegetables from the vegetable base</li><li>100g cooked boneless skinless chicken breast</li><li>1 whole egg</li><li>275g egg whites</li><li>10g reduced-fat Velveeta</li></ul>
+<h2>Notes</h2><p class="note">Estimates are practical guesses based on common package sizes and typical labels. Contains or may contain egg, dairy, soy, mushrooms, and possible gluten depending on packaged sauces.</p>
+    </section>
+    <section aria-labelledby="steps-heading">
+      <h2 id="steps-heading">Steps</h2>
+      <article class="step card">
+  <h3>1. Air fry the cauliflower and mushrooms</h3>
+  <p>Add frozen cauliflower and mushrooms to the air fryer, spray lightly, season, and start at 400°F. Expect steam and moisture early.</p>
+  <img src="assets/photos/01-air-fry-cauliflower-mushrooms.png" alt="Air fryer basket with cauliflower and mushrooms beginning to cook." loading="lazy">
+</article>
+<article class="step card">
+  <h3>2. Chop and season the zucchini</h3>
+  <p>Chop 1000g zucchini and season separately while the first vegetables cook.</p>
+  <img src="assets/photos/02-chop-season-zucchini.png" alt="Chopped zucchini on a cutting board being seasoned." loading="lazy">
+</article>
+<article class="step card">
+  <h3>3. Finish the vegetable batch</h3>
+  <p>Add zucchini and cook until reduced, soft, lightly browned, and a little charred at the edges, tossing several times.</p>
+  <img src="assets/photos/03-finish-vegetables.png" alt="Finished air-fried cauliflower, mushrooms, and zucchini, reduced and browned." loading="lazy">
+</article>
+<article class="step card">
+  <h3>4. Start the sauce base</h3>
+  <p>Microwave the 110-calorie Green Giant vegetable + cheese packet and pour it into the blender.</p>
+  <img src="assets/photos/04-sauce-base-blender.png" alt="Hot vegetable and cheese packet poured into a blender." loading="lazy">
+</article>
+<article class="step card">
+  <h3>5. Drain the vegetable liquid</h3>
+  <p>Transfer cooked vegetables to a container, use the lid to hold the vegetables back, and pour only the liquid into the blender.</p>
+  <img src="assets/photos/05-drain-vegetable-liquid.png" alt="Cooked vegetables tilted in a container so liquid drains into a blender." loading="lazy">
+</article>
+<article class="step card">
+  <h3>6. Measure 1000g cooked vegetables</h3>
+  <p>Weigh out 1000g cooked vegetables for the skillet and save the rest for another meal.</p>
+  <img src="assets/photos/06-weigh-vegetables.png" alt="Cooked vegetables weighed on a digital kitchen scale." loading="lazy">
+</article>
+<article class="step card">
+  <h3>7. Blend the sauce</h3>
+  <p>Blend vegetable packet, drained liquid, sriracha, red miso, garlic salt, and xanthan gum until thick and creamy.</p>
+  <img src="assets/photos/07-blend-sauce.png" alt="Thick creamy vegetable sauce scraped from blender into a bowl." loading="lazy">
+</article>
+<article class="step card">
+  <h3>8. Build the skillet and add eggs</h3>
+  <p>Cook garlic briefly, add vegetables and 100g cooked chicken, pour over 1 egg plus 275g egg whites, cover until just setting.</p>
+  <img src="assets/photos/08-skillet-eggs.png" alt="Egg and egg whites poured over vegetables and chicken in a skillet." loading="lazy">
+</article>
+<article class="step card">
+  <h3>9. Flip, melt cheese, and plate</h3>
+  <p>Cut into sections, flip, add 10g reduced-fat Velveeta, cover with heat off, then plate and sauce heavily.</p>
+  <img src="assets/photos/09-plate-sauce.png" alt="Finished giant egg foo young plated with thick sauce." loading="lazy">
+</article><section class="card"><h2>Optional variations</h2><ul><li>Protein: chicken, steak, trout, ground turkey, or chicken-steak combo.</li><li>Vegetables: bean sprouts, cabbage, green onion, water chestnuts.</li><li>Flavor tweaks: soy sauce, ginger, white pepper, extra sriracha.</li></ul><h2>Safety</h2><p>Use fully cooked protein. Chicken should be cooked to 165°F before it goes into the skillet. Refrigerate leftovers promptly.</p></section>
+    </section>
+    <footer>Checked for ingredient/step clarity, mobile readability, image loading, and simple cookbook structure before publishing.</footer>
+  </main>
+</body>
 </html>
