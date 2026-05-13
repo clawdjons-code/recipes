@@ -4,124 +4,177 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Giant Egg Foo Young</title>
-  <meta name="description" content="A massive high-volume egg foo young skillet with creamy vegetable sauce, practical 500, 700, and 900 calorie serving tiers.">
+  <meta name="description" content="A massive high-volume egg foo young skillet with an interactive serving-size switcher for practical 500, 700, and 900 calorie builds.">
   <style>
-    :root { --bg:#fffaf2; --ink:#241b14; --muted:#6f6257; --card:#ffffff; --line:#eadfce; --accent:#9a4d16; }
+    :root { --bg:#fffaf2; --ink:#241b14; --muted:#6f6257; --card:#ffffff; --line:#eadfce; --accent:#9a4d16; --accent-dark:#6d330d; --soft:#fff7ec; }
     * { box-sizing:border-box; }
     body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
     main { max-width: 860px; margin: 0 auto; padding: 28px 18px 64px; }
     header { margin-bottom: 28px; }
-    .eyebrow { color:var(--accent); font-weight:800; letter-spacing:.12em; text-transform:uppercase; font-size:.78rem; }
     h1 { font-size: clamp(2.1rem, 8vw, 4.8rem); line-height:.95; margin:.15em 0 .25em; }
     .summary, .meta, .card { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:18px; box-shadow:0 12px 36px rgba(64,35,10,.06); }
     .summary { font-size:1.08rem; color:var(--muted); }
     .meta { display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap:12px; margin:18px 0; }
-    .meta div { min-width:0; }
     .label { color:var(--muted); font-size:.78rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; }
     h2 { margin-top:34px; font-size:1.65rem; }
+    h3 { margin-bottom:.35rem; }
     ul, ol { padding-left:1.35rem; }
     li { margin:.4rem 0; }
+    .selector { display:grid; gap:12px; margin:18px 0; }
+    .tier-buttons { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+    .tier-button { border:1px solid var(--line); border-radius:16px; background:var(--soft); color:var(--ink); padding:12px 10px; cursor:pointer; font:inherit; font-weight:800; text-align:center; }
+    .tier-button span { display:block; color:var(--muted); font-size:.82rem; font-weight:700; margin-top:2px; }
+    .tier-button[aria-pressed="true"] { background:var(--accent); color:#fff; border-color:var(--accent-dark); box-shadow:0 10px 24px rgba(154,77,22,.22); }
+    .tier-button[aria-pressed="true"] span { color:#ffe8cb; }
+    .current-tier { display:grid; grid-template-columns:repeat(auto-fit,minmax(135px,1fr)); gap:10px; }
+    .current-tier div { background:var(--soft); border:1px solid var(--line); border-radius:14px; padding:12px; }
     .step { margin:18px 0 26px; overflow:hidden; }
     .step img { width:100%; height:auto; display:block; border-radius:16px; border:1px solid var(--line); margin-top:12px; }
     .step h3 { margin:0 0 .35rem; font-size:1.22rem; }
     .note { color:var(--muted); font-size:.95rem; }
-    .tier-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:14px; }
-    .tier { border:1px solid var(--line); border-radius:16px; padding:14px; background:#fff7ec; }
-    .tier h3 { margin:.1rem 0 .35rem; color:var(--accent); }
-    .tier ul { margin-bottom:0; }
+    .dynamic { font-weight:800; color:var(--accent-dark); }
     footer { margin-top:42px; color:var(--muted); font-size:.9rem; }
-    @media (max-width: 560px) { main { padding:22px 14px 52px; } .summary,.meta,.card { border-radius:16px; padding:15px; } }
+    @media (max-width: 560px) { main { padding:22px 14px 52px; } .summary,.meta,.card { border-radius:16px; padding:15px; } .tier-buttons { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
   <main>
     <header>
       <h1>Giant Egg Foo Young</h1>
-      <p class="summary">A giant egg foo young / skillet quiche hybrid built for volume: vegetables, egg whites, 100g cooked chicken, a little Velveeta, and a creamy sauce made from vegetable liquid instead of cream, butter, or flour.</p>
-      <section class="meta" aria-label="Recipe overview"><div><div class="label">Calories</div><strong>500 / 700 / 900</strong></div><div><div class="label">Protein</div><strong>47–100g</strong></div><div><div class="label">Food weight</div><strong>2.5–4.9 lb</strong></div><div><div class="label">Time</div><strong>55–65 min</strong></div><div><div class="label">Cost</div><strong>$7–$13</strong></div><div><div class="label">Yield</div><strong>1 huge serving</strong></div></section>
+      <p class="summary">A giant egg foo young / skillet quiche hybrid built for volume: vegetables, egg whites, cooked chicken, a little Velveeta, and a creamy sauce made from vegetable liquid instead of cream, butter, or flour.</p>
+      <section class="meta" aria-label="Recipe overview">
+        <div><div class="label">Selected calories</div><strong><span data-field="calories">900</span></strong></div>
+        <div><div class="label">Protein</div><strong><span data-field="protein">100g</span></strong></div>
+        <div><div class="label">Food weight</div><strong><span data-field="weight">4.89 lb</span></strong></div>
+        <div><div class="label">Time</div><strong>55–65 min</strong></div>
+        <div><div class="label">Cost</div><strong><span data-field="cost">$13.45</span></strong></div>
+        <div><div class="label">Yield</div><strong>1 huge serving</strong></div>
+      </section>
     </header>
-    <section class="card" aria-labelledby="ingredients-heading">
-      <h2 id="ingredients-heading">Ingredients</h2>
-      
-<h3>Vegetable base</h3>
-<ul><li>3 bags frozen cauliflower, about 12 oz each</li><li>1 package mushrooms, about 8 oz, sliced or chopped</li><li>1000g zucchini, chopped</li><li>Calorie-free avocado oil spray</li><li>Garlic salt, garlic powder, onion powder, and smoked paprika</li></ul>
-<h3>Sauce</h3>
-<ul><li>1 Green Giant vegetable + cheese packet, 110 calories</li><li>Liquid drained from the cooked vegetables</li><li>1 tablespoon sriracha</li><li>2 teaspoons red miso</li><li>1/2 teaspoon garlic salt</li><li>2g xanthan gum</li></ul>
-<h3>Skillet</h3>
-<ul><li>1–2 teaspoons minced garlic</li><li>1000g cooked vegetables from the vegetable base</li><li>100g cooked boneless skinless chicken breast</li><li>1 whole egg</li><li>250g egg whites</li><li>10g reduced-fat Velveeta</li></ul>
-<h2>Notes</h2><p class="note">Estimates are practical guesses based on common package sizes and typical labels. Contains or may contain egg, dairy, soy, mushrooms, and possible gluten depending on packaged sauces.</p>
-    </section>
 
-    <section class="card" aria-labelledby="tiers-heading">
-      <h2 id="tiers-heading">Practical serving tiers</h2>
-      <p class="note">Each tier uses one whole egg and one full Green Giant packet to avoid awkward leftovers. Smaller tiers are intentionally saucier. Estimates are practical approximations, not lab-tested nutrition facts.</p>
-      <div class="tier-grid">
-        <article class="tier">
-          <h3>500 calories</h3>
-          <p><strong>About 504 cal · 47g protein · 2.52 lb food · $7.22</strong></p>
-          <ul><li>500g cooked vegetables from the vegetable base</li><li>1 Green Giant vegetable + cheese packet</li><li>1/2 tbsp sriracha, 1 tsp red miso, 1g xanthan gum</li><li>1/2–1 tsp minced garlic</li><li>50g cooked chicken</li><li>1 whole egg + 50g egg whites</li><li>5g reduced-fat Velveeta</li></ul>
-        </article>
-        <article class="tier">
-          <h3>700 calories</h3>
-          <p><strong>About 704 cal · 73g protein · 3.71 lb food · $10.34</strong></p>
-          <ul><li>750g cooked vegetables from the vegetable base</li><li>1 Green Giant vegetable + cheese packet</li><li>3/4 tbsp sriracha, 1 1/2 tsp red miso, 1.5g xanthan gum</li><li>About 1 tsp minced garlic</li><li>75g cooked chicken</li><li>1 whole egg + 150g egg whites</li><li>8g reduced-fat Velveeta</li></ul>
-        </article>
-        <article class="tier">
-          <h3>900 calories</h3>
-          <p><strong>About 903 cal · 100g protein · 4.89 lb food · $13.45</strong></p>
-          <ul><li>1000g cooked vegetables from the vegetable base</li><li>1 Green Giant vegetable + cheese packet</li><li>1 tbsp sriracha, 2 tsp red miso, 2g xanthan gum</li><li>1–2 tsp minced garlic</li><li>100g cooked chicken</li><li>1 whole egg + 250g egg whites</li><li>10g reduced-fat Velveeta</li></ul>
-        </article>
+    <section class="card selector" aria-labelledby="serving-heading">
+      <h2 id="serving-heading">Choose serving size</h2>
+      <p class="note">Tap a tier and the ingredients plus the recipe steps update. Each tier keeps one whole egg and one full Green Giant packet so you are not dealing with half an egg or an opened freezer packet. Smaller tiers are intentionally saucier.</p>
+      <div class="tier-buttons" role="group" aria-label="Serving size">
+        <button class="tier-button" type="button" data-tier="500" aria-pressed="false">500 calories<span>~47g protein</span></button>
+        <button class="tier-button" type="button" data-tier="700" aria-pressed="false">700 calories<span>~73g protein</span></button>
+        <button class="tier-button" type="button" data-tier="900" aria-pressed="true">900 calories<span>~100g protein</span></button>
+      </div>
+      <div class="current-tier" aria-live="polite">
+        <div><div class="label">Selected build</div><strong><span data-field="caloriesLong">About 903 calories</span></strong></div>
+        <div><div class="label">Protein</div><strong><span data-field="protein">100g</span></strong></div>
+        <div><div class="label">Food weight</div><strong><span data-field="weightLong">2,220g / 4.89 lb</span></strong></div>
+        <div><div class="label">Cost estimate</div><strong><span data-field="cost">$13.45</span></strong></div>
       </div>
     </section>
+
+    <section class="card" aria-labelledby="ingredients-heading">
+      <h2 id="ingredients-heading">Ingredients for the selected serving</h2>
+      <h3>Vegetable base</h3>
+      <ul>
+        <li>3 bags frozen cauliflower, about 12 oz each</li>
+        <li>1 package mushrooms, about 8 oz, sliced or chopped</li>
+        <li>1000g zucchini, chopped</li>
+        <li>Calorie-free avocado oil spray</li>
+        <li>Garlic salt, garlic powder, onion powder, and smoked paprika</li>
+      </ul>
+      <p class="note">Cook the full vegetable base, then weigh out <span class="dynamic" data-field="veg">1000g</span> cooked vegetables for the selected serving. Save any extra cooked vegetables for another meal.</p>
+
+      <h3>Sauce</h3>
+      <ul>
+        <li>1 Green Giant vegetable + cheese packet, 110 calories</li>
+        <li>Drained liquid from the cooked vegetables, enough to blend into a thick sauce</li>
+        <li><span class="dynamic" data-field="sriracha">1 tbsp</span> sriracha, or to taste</li>
+        <li><span class="dynamic" data-field="miso">2 tsp</span> red miso</li>
+        <li>1/2 teaspoon garlic salt</li>
+        <li><span class="dynamic" data-field="xanthan">2g</span> xanthan gum</li>
+      </ul>
+
+      <h3>Skillet</h3>
+      <ul>
+        <li><span class="dynamic" data-field="garlic">1–2 tsp</span> minced garlic</li>
+        <li><span class="dynamic" data-field="veg">1000g</span> cooked vegetables from the vegetable base</li>
+        <li><span class="dynamic" data-field="chicken">100g</span> cooked boneless skinless chicken breast</li>
+        <li>1 whole egg</li>
+        <li><span class="dynamic" data-field="eggWhites">250g</span> egg whites</li>
+        <li><span class="dynamic" data-field="velveeta">10g</span> reduced-fat Velveeta</li>
+      </ul>
+      <h2>Notes</h2><p class="note">Estimates are practical guesses based on common package sizes and typical labels. Contains or may contain egg, dairy, soy, mushrooms, and possible gluten depending on packaged sauces.</p>
+    </section>
+
     <section aria-labelledby="steps-heading">
-      <h2 id="steps-heading">Steps</h2>
+      <h2 id="steps-heading">Steps for the selected serving</h2>
       <article class="step card">
-  <h3>1. Air fry the cauliflower and mushrooms</h3>
-  <p>Add frozen cauliflower and mushrooms to the air fryer, spray lightly, season, and start at 400°F. Expect steam and moisture early.</p>
-  <img src="assets/photos/01-air-fry-cauliflower-mushrooms.png" alt="Air fryer basket with cauliflower and mushrooms beginning to cook." loading="lazy">
-</article>
-<article class="step card">
-  <h3>2. Chop and season the zucchini</h3>
-  <p>Chop 1000g zucchini and season separately while the first vegetables cook.</p>
-  <img src="assets/photos/02-chop-season-zucchini.png" alt="Chopped zucchini on a cutting board being seasoned." loading="lazy">
-</article>
-<article class="step card">
-  <h3>3. Finish the vegetable batch</h3>
-  <p>Add zucchini and cook until reduced, soft, lightly browned, and a little charred at the edges, tossing several times.</p>
-  <img src="assets/photos/03-finish-vegetables.png" alt="Finished air-fried cauliflower, mushrooms, and zucchini, reduced and browned." loading="lazy">
-</article>
-<article class="step card">
-  <h3>4. Start the sauce base</h3>
-  <p>Microwave the 110-calorie Green Giant vegetable + cheese packet and pour it into the blender.</p>
-  <img src="assets/photos/04-sauce-base-blender.png" alt="Hot vegetable and cheese packet poured into a blender." loading="lazy">
-</article>
-<article class="step card">
-  <h3>5. Drain the vegetable liquid</h3>
-  <p>Transfer cooked vegetables to a container, use the lid to hold the vegetables back, and pour only the liquid into the blender.</p>
-  <img src="assets/photos/05-drain-vegetable-liquid.png" alt="Cooked vegetables tilted in a container so liquid drains into a blender." loading="lazy">
-</article>
-<article class="step card">
-  <h3>6. Measure 1000g cooked vegetables</h3>
-  <p>Weigh out 1000g cooked vegetables for the skillet and save the rest for another meal.</p>
-  <img src="assets/photos/06-weigh-vegetables.png" alt="Cooked vegetables weighed on a digital kitchen scale." loading="lazy">
-</article>
-<article class="step card">
-  <h3>7. Blend the sauce</h3>
-  <p>Blend vegetable packet, drained liquid, sriracha, red miso, garlic salt, and xanthan gum until thick and creamy.</p>
-  <img src="assets/photos/07-blend-sauce.png" alt="Thick creamy vegetable sauce scraped from blender into a bowl." loading="lazy">
-</article>
-<article class="step card">
-  <h3>8. Build the skillet and add eggs</h3>
-  <p>Cook garlic briefly, add vegetables and 100g cooked chicken, pour over 1 egg plus 250g egg whites, cover until just setting.</p>
-  <img src="assets/photos/08-skillet-eggs.png" alt="Egg and egg whites poured over vegetables and chicken in a skillet." loading="lazy">
-</article>
-<article class="step card">
-  <h3>9. Flip, melt cheese, and plate</h3>
-  <p>Cut into sections, flip, add 10g reduced-fat Velveeta, cover with heat off, then plate and sauce heavily.</p>
-  <img src="assets/photos/09-plate-sauce.png" alt="Finished giant egg foo young plated with thick sauce." loading="lazy">
-</article><section class="card"><h2>Optional variations</h2><ul><li>Protein: chicken, steak, trout, ground turkey, or chicken-steak combo.</li><li>Vegetables: bean sprouts, cabbage, green onion, water chestnuts.</li><li>Flavor tweaks: soy sauce, ginger, white pepper, extra sriracha.</li></ul><h2>Safety</h2><p>Use fully cooked protein. Chicken should be cooked to 165°F before it goes into the skillet. Refrigerate leftovers promptly.</p></section>
+        <h3>1. Air fry the cauliflower and mushrooms</h3>
+        <p>Add frozen cauliflower and mushrooms to the air fryer, spray lightly, season, and start at 400°F. Expect steam and moisture early.</p>
+        <img src="assets/photos/01-air-fry-cauliflower-mushrooms.png" alt="Air fryer basket with cauliflower and mushrooms beginning to cook." loading="lazy">
+      </article>
+      <article class="step card">
+        <h3>2. Chop and season the zucchini</h3>
+        <p>Chop 1000g zucchini and season separately while the first vegetables cook.</p>
+        <img src="assets/photos/02-chop-season-zucchini.png" alt="Chopped zucchini on a cutting board being seasoned." loading="lazy">
+      </article>
+      <article class="step card">
+        <h3>3. Finish the vegetable batch</h3>
+        <p>Add zucchini and cook until reduced, soft, lightly browned, and a little charred at the edges, tossing several times.</p>
+        <img src="assets/photos/03-finish-vegetables.png" alt="Finished air-fried cauliflower, mushrooms, and zucchini, reduced and browned." loading="lazy">
+      </article>
+      <article class="step card">
+        <h3>4. Start the sauce base</h3>
+        <p>Microwave the 110-calorie Green Giant vegetable + cheese packet and pour it into the blender.</p>
+        <img src="assets/photos/04-sauce-base-blender.png" alt="Hot vegetable and cheese packet poured into a blender." loading="lazy">
+      </article>
+      <article class="step card">
+        <h3>5. Drain the vegetable liquid</h3>
+        <p>Transfer cooked vegetables to a container, use the lid to hold the vegetables back, and pour the liquid into the blender. Use enough liquid to make a thick blendable sauce.</p>
+        <img src="assets/photos/05-drain-vegetable-liquid.png" alt="Cooked vegetables tilted in a container so liquid drains into a blender." loading="lazy">
+      </article>
+      <article class="step card">
+        <h3>6. Measure the cooked vegetables</h3>
+        <p>Weigh out <span class="dynamic" data-field="veg">1000g</span> cooked vegetables for the skillet and save the rest for another meal.</p>
+        <img src="assets/photos/06-weigh-vegetables.png" alt="Cooked vegetables weighed on a digital kitchen scale." loading="lazy">
+      </article>
+      <article class="step card">
+        <h3>7. Blend the sauce</h3>
+        <p>Blend the vegetable packet, drained liquid, <span class="dynamic" data-field="sriracha">1 tbsp</span> sriracha, <span class="dynamic" data-field="miso">2 tsp</span> red miso, garlic salt, and <span class="dynamic" data-field="xanthan">2g</span> xanthan gum until thick and creamy.</p>
+        <img src="assets/photos/07-blend-sauce.png" alt="Thick creamy vegetable sauce scraped from blender into a bowl." loading="lazy">
+      </article>
+      <article class="step card">
+        <h3>8. Build the skillet and add eggs</h3>
+        <p>Cook <span class="dynamic" data-field="garlic">1–2 tsp</span> garlic briefly, add <span class="dynamic" data-field="veg">1000g</span> cooked vegetables and <span class="dynamic" data-field="chicken">100g</span> cooked chicken, then pour over 1 whole egg plus <span class="dynamic" data-field="eggWhites">250g</span> egg whites. Cover until just setting.</p>
+        <img src="assets/photos/08-skillet-eggs.png" alt="Egg and egg whites poured over vegetables and chicken in a skillet." loading="lazy">
+      </article>
+      <article class="step card">
+        <h3>9. Flip, melt cheese, and plate</h3>
+        <p>Cut into sections, flip, add <span class="dynamic" data-field="velveeta">10g</span> reduced-fat Velveeta, cover with heat off, then plate and sauce heavily.</p>
+        <img src="assets/photos/09-plate-sauce.png" alt="Finished giant egg foo young plated with thick sauce." loading="lazy">
+      </article>
+      <section class="card"><h2>Optional variations</h2><ul><li>Protein: chicken, steak, trout, ground turkey, or chicken-steak combo.</li><li>Vegetables: bean sprouts, cabbage, green onion, water chestnuts.</li><li>Flavor tweaks: soy sauce, ginger, white pepper, extra sriracha.</li></ul><h2>Safety</h2><p>Use fully cooked protein. Chicken should be cooked to 165°F before it goes into the skillet. Refrigerate leftovers promptly.</p></section>
     </section>
     <footer>Checked for ingredient/step clarity, mobile readability, image loading, and simple cookbook structure before publishing.</footer>
   </main>
+  <script>
+    const tiers = {
+      "500": { calories:"500", caloriesLong:"About 504 calories", protein:"47g", weight:"2.52 lb", weightLong:"1,145g / 2.52 lb", cost:"$7.22", veg:"500g", sriracha:"1/2 tbsp", miso:"1 tsp", xanthan:"1g", garlic:"1/2–1 tsp", chicken:"50g", eggWhites:"50g", velveeta:"5g" },
+      "700": { calories:"700", caloriesLong:"About 704 calories", protein:"73g", weight:"3.71 lb", weightLong:"1,683g / 3.71 lb", cost:"$10.34", veg:"750g", sriracha:"3/4 tbsp", miso:"1 1/2 tsp", xanthan:"1.5g", garlic:"about 1 tsp", chicken:"75g", eggWhites:"150g", velveeta:"8g" },
+      "900": { calories:"900", caloriesLong:"About 903 calories", protein:"100g", weight:"4.89 lb", weightLong:"2,220g / 4.89 lb", cost:"$13.45", veg:"1000g", sriracha:"1 tbsp", miso:"2 tsp", xanthan:"2g", garlic:"1–2 tsp", chicken:"100g", eggWhites:"250g", velveeta:"10g" }
+    };
+    function setTier(key) {
+      const data = tiers[key];
+      document.querySelectorAll('[data-field]').forEach(el => {
+        const field = el.getAttribute('data-field');
+        if (Object.prototype.hasOwnProperty.call(data, field)) el.textContent = data[field];
+      });
+      document.querySelectorAll('.tier-button').forEach(btn => {
+        btn.setAttribute('aria-pressed', btn.dataset.tier === key ? 'true' : 'false');
+      });
+      const url = new URL(window.location.href);
+      url.searchParams.set('serving', key);
+      history.replaceState(null, '', url);
+    }
+    document.querySelectorAll('.tier-button').forEach(btn => btn.addEventListener('click', () => setTier(btn.dataset.tier)));
+    const requested = new URLSearchParams(window.location.search).get('serving');
+    setTier(tiers[requested] ? requested : '900');
+  </script>
 </body>
 </html>
