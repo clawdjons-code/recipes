@@ -1,0 +1,16 @@
+{
+  "slug": "massive-chocolate-protein-ninja-creami",
+  "title": "Massive Chocolate Protein Ninja Creami",
+  "assets": [
+    "assets/step-1.png",
+    "assets/step-2.png",
+    "assets/step-3.png",
+    "assets/step-4.png",
+    "assets/step-5.png",
+    "assets/step-6.png",
+    "assets/step-7.png",
+    "assets/step-8.png",
+    "assets/step-9.png"
+  ],
+  "notes": "Sanitized publish package; local image generation cache paths intentionally omitted."
+}
