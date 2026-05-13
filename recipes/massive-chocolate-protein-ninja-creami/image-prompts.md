@@ -1,0 +1,35 @@
+## Step 1: Add the zucchini and fruit base
+
+Step 1: Add the zucchini and fruit base. Show: Trim the ends from 500g raw unpeeled zucchini, then cut it directly into the blender. Add 250g frozen strawberries with the tops removed, 2 cups unsweetened vanilla almond milk, and 1 cup water. Unsweetened plain almond milk also works. Photorealistic, home-kitchen vibes. Real food in a lived-in but tidy home kitchen. Achievable by an average busy home cook. Natural light if plausible. Not too polished, not studio food photography, not restaurant plating, not glossy perfection. Show exactly the cleaned-up recipe step being performed or the step result, with realistic tools, ingredients, surfaces, and mess level. Avoid over-styled commercial food photography, impossible plating, irrelevant props, extra ingredients, or a different cooking stage. No text overlays.
+
+## Step 2: Add the protein
+
+Step 2: Add the protein. Show: Add 1 scoop chocolate whey protein, about 32g, and 1 scoop hot chocolate collagen protein, about 20g. Photorealistic, home-kitchen vibes. Real food in a lived-in but tidy home kitchen. Achievable by an average busy home cook. Natural light if plausible. Not too polished, not studio food photography, not restaurant plating, not glossy perfection. Show exactly the cleaned-up recipe step being performed or the step result, with realistic tools, ingredients, surfaces, and mess level. Avoid over-styled commercial food photography, impossible plating, irrelevant props, extra ingredients, or a different cooking stage. No text overlays.
+
+## Step 3: Add the chocolate flavor
+
+Step 3: Add the chocolate flavor. Show: Add 20g cocoa powder, 25g instant sugar-free chocolate pudding mix, monk fruit sweetener to taste, vanilla extract to taste, and sugar-free syrup to taste. Good starting points are 1–2 tablespoons monk fruit, about 1 teaspoon vanilla extract, and 1–2 tablespoons sugar-free syrup. Photorealistic, home-kitchen vibes. Real food in a lived-in but tidy home kitchen. Achievable by an average busy home cook. Natural light if plausible. Not too polished, not studio food photography, not restaurant plating, not glossy perfection. Show exactly the cleaned-up recipe step being performed or the step result, with realistic tools, ingredients, surfaces, and mess level. Avoid over-styled commercial food photography, impossible plating, irrelevant props, extra ingredients, or a different cooking stage. No text overlays.
+
+## Step 4: Add the xanthan gum
+
+Step 4: Add the xanthan gum. Show: Add 2g xanthan gum. Blend it thoroughly; too much xanthan gum or poor blending can make the texture gummy. Photorealistic, home-kitchen vibes. Real food in a lived-in but tidy home kitchen. Achievable by an average busy home cook. Natural light if plausible. Not too polished, not studio food photography, not restaurant plating, not glossy perfection. Show exactly the cleaned-up recipe step being performed or the step result, with realistic tools, ingredients, surfaces, and mess level. Avoid over-styled commercial food photography, impossible plating, irrelevant props, extra ingredients, or a different cooking stage. No text overlays.
+
+## Step 5: Blend until completely smooth
+
+Step 5: Blend until completely smooth. Show: Blend until no zucchini chunks remain and the mixture looks like a thick chocolate milkshake. The blender should be nearly full from the volume. If the blender struggles before it gets smooth, add a small splash of almond milk only to help blending. Photorealistic, home-kitchen vibes. Real food in a lived-in but tidy home kitchen. Achievable by an average busy home cook. Natural light if plausible. Not too polished, not studio food photography, not restaurant plating, not glossy perfection. Show exactly the cleaned-up recipe step being performed or the step result, with realistic tools, ingredients, surfaces, and mess level. Avoid over-styled commercial food photography, impossible plating, irrelevant props, extra ingredients, or a different cooking stage. No text overlays.
+
+## Step 6: Fill the Ninja Creami pints
+
+Step 6: Fill the Ninja Creami pints. Show: Divide the mixture evenly into about 3 standard Ninja Creami pint containers. Do not exceed the max fill line. Photorealistic, home-kitchen vibes. Real food in a lived-in but tidy home kitchen. Achievable by an average busy home cook. Natural light if plausible. Not too polished, not studio food photography, not restaurant plating, not glossy perfection. Show exactly the cleaned-up recipe step being performed or the step result, with realistic tools, ingredients, surfaces, and mess level. Avoid over-styled commercial food photography, impossible plating, irrelevant props, extra ingredients, or a different cooking stage. No text overlays.
+
+## Step 7: Freeze until solid
+
+Step 7: Freeze until solid. Show: Place lids on the pints and freeze until completely solid. Best results come after about 24 hours. Photorealistic, home-kitchen vibes. Real food in a lived-in but tidy home kitchen. Achievable by an average busy home cook. Natural light if plausible. Not too polished, not studio food photography, not restaurant plating, not glossy perfection. Show exactly the cleaned-up recipe step being performed or the step result, with realistic tools, ingredients, surfaces, and mess level. Avoid over-styled commercial food photography, impossible plating, irrelevant props, extra ingredients, or a different cooking stage. No text overlays.
+
+## Step 8: Spin on Lite Ice Cream
+
+Step 8: Spin on Lite Ice Cream. Show: Keep the pint frozen until ready to spin. Run each pint on the Lite Ice Cream setting using the 4-minute spin cycle, 3 total times. Do not add extra liquid between spins. Photorealistic, home-kitchen vibes. Real food in a lived-in but tidy home kitchen. Achievable by an average busy home cook. Natural light if plausible. Not too polished, not studio food photography, not restaurant plating, not glossy perfection. Show exactly the cleaned-up recipe step being performed or the step result, with realistic tools, ingredients, surfaces, and mess level. Avoid over-styled commercial food photography, impossible plating, irrelevant props, extra ingredients, or a different cooking stage. No text overlays.
+
+## Step 9: Serve, refreeze, and re-spin as needed
+
+Step 9: Serve, refreeze, and re-spin as needed. Show: Eat after spinning, or refreeze leftovers. If a refrozen pint becomes fully solid again, re-spin before eating. Clean the blender and Ninja Creami containers thoroughly after use. Photorealistic, home-kitchen vibes. Real food in a lived-in but tidy home kitchen. Achievable by an average busy home cook. Natural light if plausible. Not too polished, not studio food photography, not restaurant plating, not glossy perfection. Show exactly the cleaned-up recipe step being performed or the step result, with realistic tools, ingredients, surfaces, and mess level. Avoid over-styled commercial food photography, impossible plating, irrelevant props, extra ingredients, or a different cooking stage. No text overlays.
