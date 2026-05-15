@@ -4,36 +4,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>High-Protein Massive Taco Night</title>
-  <meta name="description" content="A big high-volume taco plate with Egglife wraps, seasoned vegetables, cauliflower rice, bean dip, and a protein option that keeps the meal around 800 calories.">
+  <meta name="description" content="A big high-volume taco plate with Egglife wraps, seasoned vegetables, cauliflower rice, bean dip, and a protein toggle that keeps the meal around 800 calories.">
   <style>
 :root { --bg:#fffaf2; --ink:#241b14; --muted:#6f6257; --card:#ffffff; --line:#eadfce; --accent:#9a4d16; --soft:#fff7ea; }
-*{box-sizing:border-box} body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.55} main{max-width:900px;margin:0 auto;padding:28px 18px 64px} h1{font-size:clamp(2.2rem,8vw,4.8rem);line-height:.95;margin:.15em 0 .25em} h2{margin-top:34px;font-size:1.65rem} h3{margin:0 0 .35rem;font-size:1.22rem}.summary,.meta,.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 12px 36px rgba(64,35,10,.06)}.summary{font-size:1.08rem;color:var(--muted)}.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:18px 0}.label{display:block;color:var(--muted);font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.value{font-weight:850;font-size:1.1rem}.card{margin:18px 0} ul,ol{padding-left:1.35rem} li{margin:.4rem 0}.ingredient-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.subcard{border:1px solid var(--line);border-radius:16px;padding:14px;background:#fffdf9}.protein-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.option{border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--soft)}.step{margin:18px 0 30px;overflow:hidden}.step img{width:100%;height:auto;display:block;border-radius:16px;border:1px solid var(--line);margin-top:12px}.note{color:var(--muted);font-size:.95rem}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.25rem .65rem;background:var(--soft);font-weight:800;margin:.15rem .25rem .15rem 0} footer{margin-top:42px;color:var(--muted);font-size:.9rem}@media(max-width:560px){main{padding:22px 14px 52px}.summary,.meta,.card{border-radius:16px;padding:15px}.ingredient-grid,.protein-options{grid-template-columns:1fr}}
+*{box-sizing:border-box} body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.55} main{max-width:900px;margin:0 auto;padding:28px 18px 64px} h1{font-size:clamp(2.2rem,8vw,4.8rem);line-height:.95;margin:.15em 0 .25em} h2{margin-top:34px;font-size:1.65rem} h3{margin:0 0 .35rem;font-size:1.22rem}.summary,.meta,.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 12px 36px rgba(64,35,10,.06)}.summary{font-size:1.08rem;color:var(--muted)}.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:18px 0}.label{display:block;color:var(--muted);font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.value{font-weight:850;font-size:1.1rem}.card{margin:18px 0} ul,ol{padding-left:1.35rem} li{margin:.4rem 0}.ingredient-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.subcard{border:1px solid var(--line);border-radius:16px;padding:14px;background:#fffdf9}.protein-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.option{border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--soft)}.toggle-row{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 16px}.protein-toggle{appearance:none;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);padding:.75rem 1rem;font-weight:900;cursor:pointer;box-shadow:0 4px 16px rgba(64,35,10,.05)}.protein-toggle[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}.step{margin:18px 0 30px;overflow:hidden}.step img{width:100%;height:auto;display:block;border-radius:16px;border:1px solid var(--line);margin-top:12px}.note{color:var(--muted);font-size:.95rem}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.25rem .65rem;background:var(--soft);font-weight:800;margin:.15rem .25rem .15rem 0} footer{margin-top:42px;color:var(--muted);font-size:.9rem}@media(max-width:560px){main{padding:22px 14px 52px}.summary,.meta,.card{border-radius:16px;padding:15px}.ingredient-grid,.protein-options{grid-template-columns:1fr}.protein-toggle{width:100%}}
 </style>
 </head>
-<body>
+<body data-selected-protein="beef">
 <main>
 <header>
-  <p><span class="pill">6 tacos</span><span class="pill">around 800 calories</span><span class="pill">high protein</span></p>
+  <p><span class="pill">6 tacos</span><span class="pill">around 800 calories</span><span class="pill">high protein</span><span class="pill">protein toggle</span></p>
   <h1>High-Protein Massive Taco Night</h1>
-  <p class="summary">A big, high-volume taco plate using Egglife wraps, seasoned vegetables, cauliflower rice, bean dip, and a protein option that keeps the full meal around 800 calories. The default version uses 93% ground beef, with chicken breast and lean sirloin options included.</p>
+  <p class="summary">A big, high-volume taco plate using Egglife wraps, seasoned vegetables, cauliflower rice, bean dip, and a protein option that keeps the full meal around 800 calories. Use the toggle below and the nutrition, ingredient list, cooking step, assembly step, and protein images update to match.</p>
   <section class="meta" aria-label="Recipe overview">
     <div><span class="label">Yield</span><span class="value">6 tacos</span></div>
     <div><span class="label">Prep time</span><span class="value">15-20 min</span></div>
     <div><span class="label">Cook time</span><span class="value">20-30 min</span></div>
     <div><span class="label">Total time</span><span class="value">35-45 min</span></div>
-    <div><span class="label">Default calories</span><span class="value">~799 total</span></div>
-    <div><span class="label">Default protein</span><span class="value">~69 g total</span></div>
+    <div><span class="label">Selected protein</span><span class="value" data-field="label">93% ground beef</span></div>
+    <div><span class="label">Calories</span><span class="value" data-field="calories">~799 total</span></div>
+    <div><span class="label">Protein</span><span class="value" data-field="protein">~69 g total</span></div>
   </section>
 </header>
 
-<section class="card" aria-labelledby="nutrition-heading">
-  <h2 id="nutrition-heading">Estimated nutrition</h2>
-  <p class="note">Calories are practical estimates with about a 2% margin. The fixed non-meat base is estimated at 480 calories and about 26.5 g protein.</p>
-  <div class="protein-options">
-    <div class="option"><strong>93% ground beef</strong><br>170 g meat<br>~799 calories total<br>~133 calories per taco<br>~69 g total protein</div>
-    <div class="option"><strong>Chicken breast</strong><br>200 g cooked chicken<br>~810 calories total<br>~135 calories per taco<br>~88 g total protein</div>
-    <div class="option"><strong>Lean sirloin</strong><br>150 g sirloin<br>~795 calories total<br>~133 calories per taco<br>~68 g total protein</div>
+<section class="card" aria-labelledby="protein-heading">
+  <h2 id="protein-heading">Choose your protein</h2>
+  <div class="toggle-row" role="group" aria-label="Protein option">
+    <button type="button" class="protein-toggle" data-protein="beef" aria-pressed="true">93% ground beef</button>
+    <button type="button" class="protein-toggle" data-protein="chicken" aria-pressed="false">Chicken breast</button>
+    <button type="button" class="protein-toggle" data-protein="sirloin" aria-pressed="false">Lean sirloin</button>
   </div>
+  <div class="protein-options">
+    <div class="option"><strong data-field="label">93% ground beef</strong><br><span data-field="amountDetail">170 g 93% ground beef</span><br><span data-field="calories">~799 total</span><br><span data-field="perTaco">~133 per taco</span><br><span data-field="protein">~69 g total</span><br><span class="note">2% range: <span data-field="range">783-815 cal</span></span></div>
+    <div class="option"><strong>Protein detail</strong><br>Meat calories: <span data-field="meatCalories">~319 cal</span><br>Meat protein: <span data-field="meatProtein">~42 g</span><br>Fixed-base protein: ~26.5 g<br>Fixed base calories: 480 cal</div>
+  </div>
+  <p class="note">The selected option is the active recipe. The amounts below and the affected directions change with the toggle.</p>
 </section>
 
 <section class="card" aria-labelledby="ingredients-heading">
@@ -53,12 +58,11 @@
       </ul>
     </div>
     <div class="subcard">
-      <h3>Choose one protein</h3>
+      <h3>Selected protein</h3>
       <ul>
-        <li><strong>Default:</strong> 170 g 93% ground beef</li>
-        <li><strong>Chicken option:</strong> 200 g cooked chicken breast</li>
-        <li><strong>Sirloin option:</strong> 150 g lean sirloin</li>
+        <li><strong data-field="ingredientLine">170 g 93% ground beef</strong></li>
       </ul>
+      <p class="note">Toggle above to switch this line to chicken breast or lean sirloin.</p>
     </div>
   </div>
 </section>
@@ -86,10 +90,9 @@
   </article>
 
   <article class="step">
-    <h3>2. Cook the protein</h3>
-    <p>Cook your selected protein. For 93% ground beef, cook until browned and fully cooked through. Use about 170 g cooked or portioned meat for the tacos.</p>
-    <p>For chicken breast, use about 200 g cooked chicken breast. If cooking from raw, cook until it reaches 165°F internally, then slice or chop it. For lean sirloin, cook to your preferred doneness, rest briefly, then slice. Use about 150 g for the tacos.</p>
-    <img src="assets/02-browned-ground-beef.png" alt="Browned crumbled ground beef cooking in a skillet with a spatula.">
+    <h3>2. Cook the <span data-field="shortLabel">Ground beef</span></h3>
+    <p><span data-field="cookLead">For 93% ground beef, cook until browned and fully cooked through.</span> <span data-field="cookUse">Use about 170 g cooked or portioned meat for the tacos.</span></p>
+    <img id="protein-image" src="assets/02-browned-ground-beef.png" alt="Browned crumbled ground beef cooking in a skillet with a spatula.">
   </article>
 
   <article class="step">
@@ -112,8 +115,8 @@
 
   <article class="step">
     <h3>6. Assemble the tacos</h3>
-    <p>Spread the measured bean dip across the wraps. Add the vegetable base, then divide the selected protein evenly across all 6 tacos. Roll or fold the wraps and eat while warm.</p>
-    <img src="assets/06-assembled-tacos.png" alt="Six pale Egglife wrap tacos filled with bean dip, vegetable cauliflower rice base, and browned ground beef.">
+    <p>Spread the measured bean dip across the wraps. Add the vegetable base, then <span data-field="assemble">divide the browned ground beef evenly across all 6 tacos</span>. Roll or fold the wraps and eat while warm.</p>
+    <img id="final-image" src="assets/06-assembled-tacos.png" alt="Six pale Egglife wrap tacos filled with bean dip, vegetable cauliflower rice base, and browned ground beef.">
   </article>
 </section>
 
@@ -130,5 +133,59 @@
 </section>
 <footer>Checked for ingredient/step clarity, mobile readability, image loading, and simple cookbook structure before publishing.</footer>
 </main>
+<script>
+const proteinOptions = {
+  beef: {
+    label: '93% ground beef', shortLabel: 'Ground beef', amount: '170 g', amountDetail: '170 g 93% ground beef', calories: '~799 total', defaultCalories: '~799 total', perTaco: '~133 per taco', protein: '~69 g total', meatCalories: '~319 cal', meatProtein: '~42 g', range: '783-815 cal',
+    ingredientLine: '170 g 93% ground beef',
+    cookLead: 'For 93% ground beef, cook until browned and fully cooked through.',
+    cookUse: 'Use about 170 g cooked or portioned meat for the tacos.',
+    assemble: 'divide the browned ground beef evenly across all 6 tacos',
+    img2: 'assets/02-browned-ground-beef.png', alt2: 'Browned crumbled ground beef cooking in a skillet with a spatula.',
+    img6: 'assets/06-assembled-tacos.png', alt6: 'Six pale Egglife wrap tacos filled with bean dip, vegetable cauliflower rice base, and browned ground beef.'
+  },
+  chicken: {
+    label: 'Chicken breast', shortLabel: 'Chicken', amount: '200 g', amountDetail: '200 g cooked chicken breast', calories: '~810 total', defaultCalories: '~810 total', perTaco: '~135 per taco', protein: '~88 g total', meatCalories: '~330 cal', meatProtein: '~62 g', range: '794-826 cal',
+    ingredientLine: '200 g cooked chicken breast',
+    cookLead: 'For chicken breast, use cooked chicken breast, or cook raw chicken until it reaches 165°F internally.',
+    cookUse: 'Slice or chop, then use about 200 g across the tacos.',
+    assemble: 'divide the cooked chicken breast evenly across all 6 tacos',
+    img2: 'assets/02-chicken-breast.png', alt2: 'Cooked chicken breast being sliced on a cutting board for taco filling.',
+    img6: 'assets/06-assembled-chicken-tacos.png', alt6: 'Six pale Egglife wrap tacos filled with bean dip, vegetable cauliflower rice base, and cooked chicken breast.'
+  },
+  sirloin: {
+    label: 'Lean sirloin', shortLabel: 'Sirloin', amount: '150 g', amountDetail: '150 g lean sirloin', calories: '~795 total', defaultCalories: '~795 total', perTaco: '~133 per taco', protein: '~68 g total', meatCalories: '~315 cal', meatProtein: '~42 g', range: '779-811 cal',
+    ingredientLine: '150 g lean sirloin',
+    cookLead: 'For lean sirloin, cook to your preferred doneness, then rest briefly before slicing.',
+    cookUse: 'Use about 150 g sliced sirloin across the tacos.',
+    assemble: 'divide the sliced sirloin evenly across all 6 tacos',
+    img2: 'assets/02-sliced-sirloin.png', alt2: 'Cooked lean sirloin being sliced on a cutting board for taco filling.',
+    img6: 'assets/06-assembled-sirloin-tacos.png', alt6: 'Six pale Egglife wrap tacos filled with bean dip, vegetable cauliflower rice base, and sliced sirloin.'
+  }
+};
+function setProtein(key, updateUrl = true) {
+  const data = proteinOptions[key] || proteinOptions.beef;
+  document.querySelectorAll('[data-field]').forEach(el => {
+    const field = el.getAttribute('data-field');
+    if (Object.prototype.hasOwnProperty.call(data, field)) el.textContent = data[field];
+  });
+  document.querySelectorAll('[data-protein]').forEach(btn => btn.setAttribute('aria-pressed', btn.dataset.protein === key ? 'true' : 'false'));
+  const proteinImg = document.getElementById('protein-image');
+  const finalImg = document.getElementById('final-image');
+  if (proteinImg) { proteinImg.src = data.img2; proteinImg.alt = data.alt2; }
+  if (finalImg) { finalImg.src = data.img6; finalImg.alt = data.alt6; }
+  document.body.setAttribute('data-selected-protein', key);
+  if (updateUrl && window.history && window.URLSearchParams) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('protein', key);
+    history.replaceState(null, '', url);
+  }
+}
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-protein]').forEach(btn => btn.addEventListener('click', () => setProtein(btn.dataset.protein)));
+  const params = new URLSearchParams(window.location.search);
+  setProtein(params.get('protein') || 'beef', false);
+});
+</script>
 </body>
 </html>
