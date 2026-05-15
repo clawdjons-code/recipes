@@ -1,13 +1,26 @@
 {
   "slug": "high-protein-massive-taco-night",
   "title": "High-Protein Massive Taco Night",
-  "public_files": [
-    "index.html",
-    "assets/01-air-fryer-peppers-onions-cauliflower.png",
-    "assets/02-browned-ground-beef.png",
-    "assets/03-measured-bean-dip.png",
-    "assets/04-drain-vegetable-base.png",
-    "assets/05-warm-egglife-wraps.png",
-    "assets/06-assembled-tacos.png"
+  "images": [
+    "01-air-fryer-peppers-onions-cauliflower.png",
+    "02-browned-ground-beef.png",
+    "02-chicken-breast.png",
+    "02-sliced-sirloin.png",
+    "03-measured-bean-dip.png",
+    "04-drain-vegetable-base.png",
+    "05-warm-egglife-wraps.png",
+    "06-assembled-chicken-tacos.png",
+    "06-assembled-sirloin-tacos.png",
+    "06-assembled-tacos.png"
+  ],
+  "interactive_fields": [
+    "protein",
+    "nutrition",
+    "ingredientLine",
+    "cookLead",
+    "cookUse",
+    "assemble",
+    "protein-image",
+    "final-image"
   ]
 }
