@@ -1,0 +1,168 @@
+{
+  "title": "High-Protein Strawberry Cheesecake Pancakes",
+  "slug": "high-protein-strawberry-cheesecake-pancakes",
+  "summary": "A giant dessert-style pancake meal with oats, egg whites, cottage cheese, blueberries, nonfat vanilla yogurt, fat-free whipped topping, calorie-free syrup, and a mountain of strawberries. The revised logged version lands at 926 calories and 81g protein while weighing about 1.5kg before syrup/spray trace amounts.",
+  "yield": "1 giant nighttime meal / 3 large pancakes",
+  "allergens": "Contains dairy, egg, and oats. May not be gluten-free unless certified gluten-free oats are used. Contains strawberries; optional blueberries if included.",
+  "safety": "Cook pancakes until fully set in the center. Keep the cottage cheese/yogurt topping refrigerated until assembly. Refrigerate leftovers promptly, though this recipe is intended to be eaten fresh.",
+  "logged_totals": {
+    "calories": 926,
+    "carbs_g": 137,
+    "fat_g": 9,
+    "protein_g": 81,
+    "macro_split": "58% carbs / 8% fat / 34% protein",
+    "macro_source": "Revised screenshot with 70g blueberries included"
+  },
+  "items": [
+    {
+      "name": "Frozen blueberries",
+      "brand": "Raw g / Blueberries",
+      "amount": "70 g",
+      "calories": 40,
+      "weight_g": 70,
+      "cost_usd": 0.45,
+      "role": "pancake batter",
+      "notes": "Confirmed in revised screenshot."
+    },
+    {
+      "name": "Nonfat vanilla light yogurt",
+      "brand": "Friendly Farms",
+      "amount": "260 g",
+      "calories": 122,
+      "weight_g": 260,
+      "cost_usd": 0.75,
+      "role": "cheesecake topping"
+    },
+    {
+      "name": "Egg whites",
+      "brand": "Egg White 100g entry",
+      "amount": "155 g",
+      "calories": 81,
+      "weight_g": 155,
+      "cost_usd": 0.85,
+      "role": "pancake batter"
+    },
+    {
+      "name": "Quick cook oatmeal",
+      "brand": "Quaker",
+      "amount": "40 g",
+      "calories": 147,
+      "weight_g": 40,
+      "cost_usd": 0.2,
+      "role": "pancake batter"
+    },
+    {
+      "name": "Fat-free Reddi Whip",
+      "brand": "Reddi Whip",
+      "amount": "100 g",
+      "calories": 100,
+      "weight_g": 100,
+      "cost_usd": 1.8,
+      "role": "topping"
+    },
+    {
+      "name": "Strawberries",
+      "brand": "Produce",
+      "amount": "500 g",
+      "calories": 160,
+      "weight_g": 500,
+      "cost_usd": 3.5,
+      "role": "topping"
+    },
+    {
+      "name": "Small curd 1% low-fat cottage cheese",
+      "brand": "Great Value",
+      "amount": "130 g",
+      "calories": 92,
+      "weight_g": 130,
+      "cost_usd": 0.55,
+      "role": "pancake batter"
+    },
+    {
+      "name": "Small curd 1% low-fat cottage cheese",
+      "brand": "Great Value",
+      "amount": "260 g",
+      "calories": 184,
+      "weight_g": 260,
+      "cost_usd": 1.1,
+      "role": "cheesecake topping"
+    },
+    {
+      "name": "Cinnamon, pumpkin spice, stevia, vanilla extract",
+      "brand": "pantry",
+      "amount": "dashes",
+      "calories": 0,
+      "weight_g": 0,
+      "cost_usd": 0.1,
+      "role": "flavoring"
+    },
+    {
+      "name": "Walden Farms calorie-free syrup",
+      "brand": "Walden Farms",
+      "amount": "drizzle",
+      "calories": 0,
+      "weight_g": 0,
+      "cost_usd": 0.35,
+      "role": "topping"
+    },
+    {
+      "name": "Calorie-free avocado oil spray",
+      "brand": "any",
+      "amount": "light coating",
+      "calories": 0,
+      "weight_g": 0,
+      "cost_usd": 0.1,
+      "role": "pan prep"
+    }
+  ],
+  "blueberry_discrepancy": {
+    "resolved": true,
+    "note": "Revised screenshot confirms 70g blueberries are included: +40 calories, total 926 calories."
+  },
+  "total_item_calories": 926,
+  "total_weight_g": 1515,
+  "cost_usd": 9.749999999999998,
+  "steps": [
+    {
+      "title": "Mix the batter earlier in the day",
+      "active_min": 7,
+      "elapsed_min_low": 7,
+      "elapsed_min_high": 10,
+      "text": "Combine oats, cinnamon, pumpkin spice, stevia, vanilla extract, 70g frozen blueberries, 130g cottage cheese, and 155g egg whites. Blend or mix until mostly smooth. Refrigerate until night so the oats soften, the batter thickens, and the flavors settle."
+    },
+    {
+      "title": "Prep the strawberries and cheesecake topping",
+      "active_min": 10,
+      "elapsed_min_low": 10,
+      "elapsed_min_high": 15,
+      "text": "Wash, stem, and chop 500g strawberries into small pieces. Mix 260g low-fat cottage cheese with 260g nonfat vanilla light yogurt to make the cold cheesecake-style topping."
+    },
+    {
+      "title": "Heat the pan gently",
+      "active_min": 2,
+      "elapsed_min_low": 12,
+      "elapsed_min_high": 15,
+      "text": "Lightly coat a large nonstick pan or griddle with calorie-free avocado oil spray. Heat on low-medium, around 5 out of 20, until fully preheated. The low heat keeps the thick cottage-cheese-and-egg-white batter from burning or turning rubbery."
+    },
+    {
+      "title": "Cook three large pancakes",
+      "active_min": 12,
+      "elapsed_min_low": 10,
+      "elapsed_min_high": 14,
+      "text": "Pour the batter into 3 large pancakes. Cook about 5 minutes on the first side, flip carefully, and cook about 5 minutes on the second side, until lightly golden and fully set in the center."
+    },
+    {
+      "title": "Build the cheesecake pancake mountain",
+      "active_min": 6,
+      "elapsed_min_low": 6,
+      "elapsed_min_high": 8,
+      "text": "Move the pancakes to a plate. Spread the cottage-cheese/yogurt topping over the stack, add 100g fat-free Reddi Whip, drizzle with Walden Farms calorie-free syrup, and pile the chopped strawberries over the top."
+    }
+  ],
+  "time": {
+    "active_min": 37,
+    "elapsed_min_low": 45,
+    "elapsed_min_high": 60,
+    "notes": "Does not include passive refrigerator time for the batter. If batter is already mixed, night-of time is about 35\u201345 minutes including pan preheat."
+  }
+}
