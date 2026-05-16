@@ -1,0 +1,34 @@
+{
+  "images": [
+    {
+      "step": 1,
+      "file": "assets/step-1-batter.png",
+      "source": "GPT Image 2 via Hermes image_generate",
+      "review": "accepted by description-first review"
+    },
+    {
+      "step": 2,
+      "file": "assets/step-2-strawberries-topping.png",
+      "source": "GPT Image 2 via Hermes image_generate",
+      "review": "accepted by description-first review"
+    },
+    {
+      "step": 3,
+      "file": "assets/step-3-preheat-pan.png",
+      "source": "GPT Image 2 via Hermes image_generate",
+      "review": "accepted by description-first review"
+    },
+    {
+      "step": 4,
+      "file": "assets/step-4-cook-pancakes.png",
+      "source": "GPT Image 2 via Hermes image_generate",
+      "review": "accepted by description-first review"
+    },
+    {
+      "step": 5,
+      "file": "assets/step-5-final-stack.png",
+      "source": "GPT Image 2 via Hermes image_generate",
+      "review": "accepted by description-first review"
+    }
+  ]
+}
