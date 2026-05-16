@@ -1,124 +1,27 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Big Plates, Lean Macros</title>
-  <meta name="description" content="High-volume, high-protein, lower-calorie recipe archive.">
-  <style>
-    :root {
-      color-scheme: light;
-      --bg:#f4f4f2;
-      --ink:#111111;
-      --muted:#666666;
-      --soft:#ffffff;
-      --line:#d8d8d4;
-      --shadow:rgba(0,0,0,.10);
-      --shadow-soft:rgba(0,0,0,.06);
-    }
-    * { box-sizing:border-box; }
-    body {
-      margin:0;
-      font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      background:linear-gradient(180deg,#fafafa 0%,var(--bg) 42%,#ececea 100%);
-      color:var(--ink);
-      line-height:1.45;
-    }
-    main { max-width:1120px; margin:0 auto; padding:44px 18px 76px; }
-    .eyebrow {
-      display:inline-flex; gap:.5rem; align-items:center;
-      letter-spacing:.14em; text-transform:uppercase; color:#555; font-weight:850; font-size:.76rem;
-      border:1px solid var(--line); border-radius:999px; padding:.5rem .75rem; background:rgba(255,255,255,.72);
-    }
-    h1 { font-size:clamp(3rem,10vw,7.8rem); line-height:.86; letter-spacing:-.07em; margin:.28em 0 .18em; max-width:980px; }
-    .lede { font-size:clamp(1.08rem,2.5vw,1.42rem); color:var(--muted); max-width:720px; margin:0; }
-    .stats { display:flex; flex-wrap:wrap; gap:10px; margin:26px 0 34px; }
-    .stat { background:#fff; border:1px solid var(--line); border-radius:16px; padding:10px 13px; box-shadow:0 10px 28px var(--shadow-soft); font-weight:800; }
-    .stat span { color:var(--muted); font-weight:700; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; }
-    .card {
-      display:flex; flex-direction:column; min-height:100%; overflow:hidden; text-decoration:none; color:inherit;
-      background:var(--soft); border:1px solid var(--line); border-radius:26px;
-      box-shadow:0 20px 50px var(--shadow-soft); transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease;
-    }
-    .card:nth-child(2n) h2 { color:#c2410c; } .card:nth-child(3n) h2 { color:#2563eb; } .card:nth-child(4n) h2 { color:#15803d; } .card:nth-child(5n) h2 { color:#7c3aed; } .card:nth-child(2n) .tag { color:#b45309; } .card:nth-child(3n) .tag { color:#2563eb; } .card:nth-child(4n) .tag { color:#15803d; } .card:nth-child(5n) .tag { color:#7c3aed; }
-    .card:hover { transform:translateY(-3px); border-color:#a8a8a2; box-shadow:0 26px 70px var(--shadow); }
-    .thumb-wrap { aspect-ratio:4/3; background:#dededa; overflow:hidden; border-bottom:1px solid var(--line); }
-    .thumb-wrap img { width:100%; height:100%; object-fit:cover; display:block; filter:saturate(1.08) contrast(1.03); }
-    .card-body { padding:18px; }
-    .tag { display:inline-flex; margin-bottom:10px; color:#0f766e; font-size:.75rem; font-weight:850; text-transform:uppercase; letter-spacing:.08em; }
-    h2 { margin:0 0 8px; font-size:1.35rem; letter-spacing:-.03em; color:#b1245a; }
-    .card p { margin:0; color:var(--muted); }
-    .path { display:inline-flex; margin-top:16px; color:#7c3aed; font-size:.85rem; font-weight:800; border-bottom:1px solid #999; }
-    footer { margin-top:42px; color:var(--muted); font-size:.92rem; }
-    @media (max-width:640px) {
-      main { padding:28px 14px 58px; }
-      h1 { font-size:clamp(2.7rem,16vw,4.4rem); }
-      .grid { grid-template-columns:1fr; }
-      .card { border-radius:22px; }
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <header>
-      <div class="eyebrow">Recipe archive</div>
-      <h1>Big Plates, Lean Macros.</h1>
-      <p class="lede">High-volume, high-protein, lower-calorie recipes for when “a normal serving” sounds like a personal attack.</p>
-      <div class="stats" aria-label="Archive focus">
-        <div class="stat">High volume <span>without tiny portions</span></div>
-        <div class="stat">High protein <span>without weird misery</span></div>
-        <div class="stat">Lower calorie <span>with actual food</span></div>
-      </div>
-    </header>
-    <section class="grid" aria-label="Recipes">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Jon's Recipe Pages</title><style>:root{color-scheme:light dark;--bg:#f7f3ea;--ink:#211b14;--card:#fffaf0;--muted:#776b5e;--accent:#b45309}@media(prefers-color-scheme:dark){:root{--bg:#17120d;--ink:#f8ead6;--card:#251b13;--muted:#c8b7a2;--accent:#f59e0b}}*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left,color-mix(in oklab,var(--accent) 18%,transparent),transparent 34rem),var(--bg);color:var(--ink);line-height:1.45}main{max-width:980px;margin:0 auto;padding:48px 20px 72px}.eyebrow{letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:800;font-size:.78rem}h1{font-size:clamp(2.4rem,8vw,5.8rem);line-height:.9;margin:.2em 0}.lede{font-size:clamp(1.1rem,2.5vw,1.45rem);color:var(--muted);max-width:54rem}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:34px}.card{display:block;text-decoration:none;color:inherit;background:color-mix(in oklab,var(--card) 92%,transparent);border:1px solid color-mix(in oklab,var(--muted) 28%,transparent);border-radius:24px;padding:22px;box-shadow:0 20px 50px rgba(0,0,0,.08);transition:transform .15s ease,border-color .15s ease}.card:hover{transform:translateY(-2px);border-color:var(--accent)}.card h2{margin:0 0 8px;font-size:1.45rem}.card p{margin:0;color:var(--muted)}.path{display:inline-flex;margin-top:18px;font-size:.85rem;color:var(--accent);font-weight:700}footer{margin-top:44px;color:var(--muted);font-size:.9rem}</style></head><body><main><div class="eyebrow">Recipe archive</div><h1>Jon's Recipe Pages</h1><p class="lede">A public GitHub Pages hub for shareable recipe projects. Each recipe lives in its own folder with its own static assets.</p><section class="grid" aria-label="Recipes">
       <a class="card" href="./recipes/giant-egg-foo-young/">
-        <div class="thumb-wrap"><img src="./recipes/giant-egg-foo-young/assets/photos/09-plate-sauce.png" alt="Giant Egg Foo Young hero image" loading="lazy"></div>
-        <div class="card-body">
-          <span class="tag">High volume · High protein</span>
-          <h2>Giant Egg Foo Young</h2>
-          <p>A giant high-volume, high-protein egg-and-vegetable skillet with sauce.</p>
-          <span class="path">recipes/giant-egg-foo-young/</span>
-        </div>
+        <h2>Giant Egg Foo Young</h2>
+        <p>A massive high-volume egg foo young skillet with mobile-first self-contained steps, serving-size tiers, and step photos.</p>
+        <span class="path">recipes/giant-egg-foo-young/</span>
       </a>
       <a class="card" href="./recipes/high-protein-massive-taco-night/">
-        <div class="thumb-wrap"><img src="./recipes/high-protein-massive-taco-night/assets/06-assembled-tacos.png" alt="High-Protein Massive Taco Night hero image" loading="lazy"></div>
-        <div class="card-body">
-          <span class="tag">High volume · High protein</span>
-          <h2>High-Protein Massive Taco Night</h2>
-          <p>A huge taco plate built around lean protein, vegetables, Egglife wraps, and big volume.</p>
-          <span class="path">recipes/high-protein-massive-taco-night/</span>
-        </div>
+        <h2>High-Protein Massive Taco Night</h2>
+        <p>Recipe page with its assets bundled in its own folder.</p>
+        <span class="path">recipes/high-protein-massive-taco-night/</span>
       </a>
       <a class="card" href="./recipes/high-protein-strawberry-cheesecake-pancakes/">
-        <div class="thumb-wrap"><img src="./recipes/high-protein-strawberry-cheesecake-pancakes/assets/step-5-final-stack.png" alt="High-Protein Strawberry Cheesecake Pancakes hero image" loading="lazy"></div>
-        <div class="card-body">
-          <span class="tag">High volume · High protein</span>
-          <h2>High-Protein Strawberry Cheesecake Pancakes</h2>
-          <p>A giant 926-calorie strawberry cheesecake pancake stack with 81g protein.</p>
-          <span class="path">recipes/high-protein-strawberry-cheesecake-pancakes/</span>
-        </div>
+        <h2>High-Protein Strawberry Cheesecake Pancakes</h2>
+        <p>Recipe page with its assets bundled in its own folder.</p>
+        <span class="path">recipes/high-protein-strawberry-cheesecake-pancakes/</span>
       </a>
       <a class="card" href="./recipes/high-volume-creamy-zucchini-protein-bowl/">
-        <div class="thumb-wrap"><img src="./recipes/high-volume-creamy-zucchini-protein-bowl/assets/step-9.png" alt="High-Volume Creamy Zucchini Protein Bowl hero image" loading="lazy"></div>
-        <div class="card-body">
-          <span class="tag">High volume · High protein</span>
-          <h2>High-Volume Creamy Zucchini Protein Bowl</h2>
-          <p>A big creamy zucchini-and-protein bowl designed for volume without blowing calories.</p>
-          <span class="path">recipes/high-volume-creamy-zucchini-protein-bowl/</span>
-        </div>
+        <h2>High-Volume Creamy Zucchini Protein Bowl</h2>
+        <p>Recipe page with its assets bundled in its own folder.</p>
+        <span class="path">recipes/high-volume-creamy-zucchini-protein-bowl/</span>
       </a>
       <a class="card" href="./recipes/massive-chocolate-protein-ninja-creami/">
-        <div class="thumb-wrap"><img src="./recipes/massive-chocolate-protein-ninja-creami/assets/step-9.png" alt="Massive Chocolate Protein Ninja Creami hero image" loading="lazy"></div>
-        <div class="card-body">
-          <span class="tag">High volume · High protein</span>
-          <h2>Massive Chocolate Protein Ninja Creami</h2>
-          <p>A massive chocolate protein Creami treat: dessert energy, macro-accountable restraint.</p>
-          <span class="path">recipes/massive-chocolate-protein-ninja-creami/</span>
-        </div>
+        <h2>Massive Chocolate Protein Ninja Creami</h2>
+        <p>Recipe page with its assets bundled in its own folder.</p>
+        <span class="path">recipes/massive-chocolate-protein-ninja-creami/</span>
       </a>
-    </section>
-    <footer>Each recipe keeps its assets bundled in its own folder. Review pages stay separate and off the public card grid.</footer>
-  </main>
-</body>
-</html>
+    </section><footer>New recipes live at <code>recipes/&lt;slug&gt;/index.html</code> with assets inside the same folder.</footer></main></body></html>
